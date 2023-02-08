@@ -220,7 +220,7 @@ class DbusIobrokerSmartmeterService:
 
             ##self._dbusservice['/Ac/L1/Energy/Forward'] = (meter_data['emeters'][0]['total']/1000)
             self._dbusservice['/Ac/Energy/Forward'] = grid_bought
-            self._dbusservice['/Ac/Energy/Reverse'] = grid_sold
+            ##self._dbusservice['/Ac/Energy/Reverse'] = grid_sold
 
             # logging
             ##logging.info("House Consumption (/Ac/Power): %s" % (self._dbusservice['/Ac/Power']))
