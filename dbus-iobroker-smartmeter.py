@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 # import normal packages
-from vedbus import VeDbusService
 import platform
 import logging
 import sys
@@ -20,7 +19,7 @@ import struct
 # our own packages from victron
 sys.path.insert(1, os.path.join(os.path.dirname(__file__),
                 '/opt/victronenergy/dbus-systemcalc-py/ext/velib_python'))
-
+from vedbus import VeDbusService
 
 class DbusIobrokerSmartmeterService:
     def __init__(self, servicename, deviceinstance, paths, productname='Smartmeter Reader', connection='Smartmeter via IOBroker HTTP JSON service'):
