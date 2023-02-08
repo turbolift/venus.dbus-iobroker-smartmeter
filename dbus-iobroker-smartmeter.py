@@ -218,9 +218,14 @@ class DbusIobrokerSmartmeterService:
             self._dbusservice['/Ac/Current'] = total_value / voltage
             self._dbusservice['/Ac/Voltage'] = voltage
 
-            self._dbusservice['/Ac/L1/Energy/Forward'] = grid_bought
             self._dbusservice['/Ac/Energy/Forward'] = grid_bought
-            ##self._dbusservice['/Ac/Energy/Reverse'] = grid_sold
+            self._dbusservice['/Ac/L1/Energy/Forward'] = grid_bought
+            self._dbusservice['/Ac/L2/Energy/Forward'] = 0
+            self._dbusservice['/Ac/L3/Energy/Forward'] = 0
+            self._dbusservice['/Ac/Energy/Reverse'] = 0
+            self._dbusservice['/Ac/L1/Energy/Reverse'] = 0 
+            self._dbusservice['/Ac/L2/Energy/Reverse'] = 0 
+            self._dbusservice['/Ac/L3/Energy/Reverse'] = 0 
 
             # logging
             ##logging.info("House Consumption (/Ac/Power): %s" % (self._dbusservice['/Ac/Power']))
