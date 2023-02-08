@@ -218,7 +218,7 @@ class DbusIobrokerSmartmeterService:
             self._dbusservice['/Ac/Current'] = total_value / voltage
             self._dbusservice['/Ac/Voltage'] = voltage
 
-            ##self._dbusservice['/Ac/L1/Energy/Forward'] = (meter_data['emeters'][0]['total']/1000)
+            self._dbusservice['/Ac/L1/Energy/Forward'] = grid_bought
             self._dbusservice['/Ac/Energy/Forward'] = grid_bought
             ##self._dbusservice['/Ac/Energy/Reverse'] = grid_sold
 
